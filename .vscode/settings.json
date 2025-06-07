@@ -1,0 +1,6 @@
+{
+    "marimo.debug": true,
+    "marimo.https": false,
+    "marimo.port": 19081,
+    "marimo.sandbox": true
+}

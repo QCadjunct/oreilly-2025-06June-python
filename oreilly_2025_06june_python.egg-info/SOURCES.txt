@@ -1,0 +1,8 @@
+README.md
+main.py
+pyproject.toml
+oreilly_2025_06june_python.egg-info/PKG-INFO
+oreilly_2025_06june_python.egg-info/SOURCES.txt
+oreilly_2025_06june_python.egg-info/dependency_links.txt
+oreilly_2025_06june_python.egg-info/requires.txt
+oreilly_2025_06june_python.egg-info/top_level.txt
