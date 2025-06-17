@@ -1,0 +1,259 @@
+{
+  "version": "1",
+  "metadata": {
+    "marimo_version": "0.13.15"
+  },
+  "cells": [
+    {
+      "id": "Hbol",
+      "code_hash": "92ce7cc085d2314d1a051f7a2812c2c6",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "MJUe",
+      "code_hash": "465e47885efa82bdb761eadd7170dc18",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "vblA",
+      "code_hash": "f7fe6026b002dd40d7413672c126a277",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<span class=\"markdown prose dark:prose-invert\"><h1 id=\"chapter-5-numbers-and-expressions\">Chapter 5: Numbers and Expressions</h1>\n<span class=\"paragraph\">Welcome to this interactive exploration of Python's numeric objects and operations! \nThis notebook will guide you through hands-on experiments with Python's core numeric types.</span>\n<h2 id=\"learning-objectives\">Learning Objectives</h2>\n<span class=\"paragraph\">By the end of this interactive session, you will be able to:\n- [ ] Work with Python's core numeric types (integers, floats, complex numbers)\n- [ ] Apply arithmetic operators and understand operator precedence\n- [ ] Convert between different numeric bases (decimal, hex, octal, binary)\n- [ ] Use advanced numeric types (Decimal, Fraction, Set)\n- [ ] Perform bitwise operations and understand their applications\n- [ ] Apply numeric built-in functions and methods effectively</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "bkHC",
+      "code_hash": null,
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "lEQa",
+      "code_hash": "145308959d81f9bd5ed38e16cfb03530",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<span class=\"markdown prose dark:prose-invert\"><h2 id=\"numeric-object-basics\">\ud83d\udd22 Numeric Object Basics</h2>\n<span class=\"paragraph\">Python supports several numeric types. Let's explore the most fundamental ones:</span>\n<ul>\n<li><strong>Integer objects</strong>: Whole numbers with unlimited precision</li>\n<li><strong>Floating-point objects</strong>: Numbers with decimal points</li>\n<li><strong>Complex number objects</strong>: Numbers with real and imaginary parts</li>\n</ul></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "PKri",
+      "code_hash": null,
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Xref",
+      "code_hash": "0027246fbd6e689f88a7dda9db31f693",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<div style='display: flex;flex: 1;flex-direction: column;justify-content: flex-start;align-items: normal;flex-wrap: nowrap;gap: 0.5rem'><span class=\"markdown prose dark:prose-invert\"><h3 id=\"interactive-numeric-playground\">\ud83c\udfae Interactive Numeric Playground</h3></span><marimo-ui-element object-id='Xref-0' random-id='23a09842-e1fa-29a7-867d-d4129646452c'><marimo-text data-initial-value='&quot;42&quot;' data-label='&quot;&lt;span class=&#92;&quot;markdown prose dark:prose-invert&#92;&quot;&gt;&lt;span class=&#92;&quot;paragraph&#92;&quot;&gt;Enter an integer:&lt;/span&gt;&lt;/span&gt;&quot;' data-placeholder='&quot;&quot;' data-kind='&quot;text&quot;' data-full-width='true' data-disabled='false' data-debounce='true'></marimo-text></marimo-ui-element><marimo-ui-element object-id='Xref-1' random-id='9226fe85-31cd-cbe4-5387-94f316b1fd27'><marimo-text data-initial-value='&quot;3.14159&quot;' data-label='&quot;&lt;span class=&#92;&quot;markdown prose dark:prose-invert&#92;&quot;&gt;&lt;span class=&#92;&quot;paragraph&#92;&quot;&gt;Enter a floating-point number:&lt;/span&gt;&lt;/span&gt;&quot;' data-placeholder='&quot;&quot;' data-kind='&quot;text&quot;' data-full-width='true' data-disabled='false' data-debounce='true'></marimo-text></marimo-ui-element><marimo-ui-element object-id='Xref-2' random-id='65dd957e-8d87-fbd9-098a-ca1ce775860e'><marimo-text data-initial-value='&quot;3+4j&quot;' data-label='&quot;&lt;span class=&#92;&quot;markdown prose dark:prose-invert&#92;&quot;&gt;&lt;span class=&#92;&quot;paragraph&#92;&quot;&gt;Enter a complex number:&lt;/span&gt;&lt;/span&gt;&quot;' data-placeholder='&quot;&quot;' data-kind='&quot;text&quot;' data-full-width='true' data-disabled='false' data-debounce='true'></marimo-text></marimo-ui-element></div>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "SFPL",
+      "code_hash": null,
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "BYtC",
+      "code_hash": "7893ecf8c7a0ab56f86ffb0066376ff8",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<span class=\"markdown prose dark:prose-invert\"><h2 id=\"your-numbers\"><strong>Your Numbers:</strong></h2>\n<span class=\"paragraph\">- Integer: <code>12</code> (type: int)<br />\n    - Float: <code>36.02</code> (type: float)<br />\n    - Complex: <code>(3+4j)</code> (type: complex)  </span>\n<h2 id=\"interesting-facts\"><strong>Interesting Facts:</strong></h2>\n<span class=\"paragraph\">- Integer bit length: 4 bits<br />\n    - Float as integer ratio: (5069364330558915, 140737488355328)<br />\n    - Complex real part: 3.0, imaginary part: 4.0  </span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "RGSE",
+      "code_hash": "8d78e632b17fce1bf04d878c3b29e82a",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<div style='display: flex;flex: 1;flex-direction: column;justify-content: flex-start;align-items: normal;flex-wrap: nowrap;gap: 0.5rem'><span class=\"markdown prose dark:prose-invert\"><h3 id=\"expression-calculator\">\ud83e\uddee Expression Calculator</h3></span><span class=\"markdown prose dark:prose-invert\"><span class=\"paragraph\">Try expressions like: <code>2 ** 3 + 4 * 5</code>, <code>(1 + 2) * 3</code>, or <code>10 / 3</code></span></span><marimo-ui-element object-id='RGSE-0' random-id='15502bff-053d-f974-a911-80aedd366c34'><marimo-text data-initial-value='&quot;2 ** 3 + 4 * 5&quot;' data-label='&quot;&lt;span class=&#92;&quot;markdown prose dark:prose-invert&#92;&quot;&gt;&lt;span class=&#92;&quot;paragraph&#92;&quot;&gt;Enter a mathematical expression:&lt;/span&gt;&lt;/span&gt;&quot;' data-placeholder='&quot;&quot;' data-kind='&quot;text&quot;' data-full-width='true' data-disabled='false' data-debounce='true'></marimo-text></marimo-ui-element><marimo-ui-element object-id='RGSE-1' random-id='008cfc6c-589d-dcba-5c62-eb64123c0e7d'><marimo-button data-initial-value='0' data-label='&quot;&lt;span class=&#92;&quot;markdown prose dark:prose-invert&#92;&quot;&gt;&lt;span class=&#92;&quot;paragraph&#92;&quot;&gt;Evaluate Expression&lt;/span&gt;&lt;/span&gt;&quot;' data-kind='&quot;neutral&quot;' data-disabled='false' data-full-width='false'></marimo-button></marimo-ui-element></div>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Kclp",
+      "code_hash": "578120758da864543d6f48416cf91479",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<span class=\"markdown prose dark:prose-invert\"><span class=\"paragraph\">\u2705 <strong>Expression:</strong> <code>2 ** 3 + 4 * 5</code></span>\n<h3 id=\"result-28-type-int\"><strong>Result:</strong> <code>28</code> (type: int)</h3>\n<h4 id=\"operator-precedence-reminder\"><strong>Operator Precedence Reminder:</strong></h4>\n<span class=\"paragraph\">- <code>**</code> (exponentiation) - highest precedence<br />\n    - <code>*</code>, <code>/</code>, <code>//</code>, <code>%</code> (multiplication, division)<br />\n    - <code>+</code>, <code>-</code> (addition, subtraction) - lowest precedence<br />\n    - Use parentheses <code>()</code> to override precedence!  </span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "emfo",
+      "code_hash": "11979ff01e89cb59ca974eb48c33e1f9",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<div style='display: flex;flex: 1;flex-direction: column;justify-content: flex-start;align-items: normal;flex-wrap: nowrap;gap: 0.5rem'><span class=\"markdown prose dark:prose-invert\"><h3 id=\"base-conversion-tool\">\ud83d\udd22 Base Conversion Tool</h3></span><marimo-ui-element object-id='emfo-0' random-id='551de840-0e15-83f2-3209-1fbef125ed47'><marimo-number data-initial-value='255' data-label='&quot;&lt;span class=&#92;&quot;markdown prose dark:prose-invert&#92;&quot;&gt;&lt;span class=&#92;&quot;paragraph&#92;&quot;&gt;Enter a decimal number:&lt;/span&gt;&lt;/span&gt;&quot;' data-start='0' data-stop='10000' data-debounce='false' data-full-width='false' data-disabled='false'></marimo-number></marimo-ui-element><marimo-ui-element object-id='emfo-1' random-id='b82c2c3e-99c2-5777-e2b7-645705c4cf0b'><marimo-dropdown data-initial-value='[&quot;decimal&quot;]' data-label='&quot;&lt;span class=&#92;&quot;markdown prose dark:prose-invert&#92;&quot;&gt;&lt;span class=&#92;&quot;paragraph&#92;&quot;&gt;Input base:&lt;/span&gt;&lt;/span&gt;&quot;' data-options='[&quot;decimal&quot;, &quot;binary&quot;, &quot;octal&quot;, &quot;hexadecimal&quot;]' data-allow-select-none='false' data-searchable='false' data-full-width='false'></marimo-dropdown></marimo-ui-element></div>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Hstk",
+      "code_hash": "fdc1c9a79ab46318a7bdf05341ee756e",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "nWHF",
+      "code_hash": "80cb70733b31712753d716b11f1ecdd9",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<span class=\"markdown prose dark:prose-invert\"><h2 id=\"number-255-input-as-decimal\"><strong>Number: 255 (input as decimal)</strong></h2>\n<table>\n<thead>\n<tr>\n<th>Base</th>\n<th>Representation</th>\n<th>Python Literal</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Decimal</td>\n<td>255</td>\n<td><code>255</code></td>\n</tr>\n<tr>\n<td>Binary</td>\n<td>11111111</td>\n<td><code>0b11111111</code></td>\n</tr>\n<tr>\n<td>Octal</td>\n<td>377</td>\n<td><code>0o377</code></td>\n</tr>\n<tr>\n<td>Hexadecimal</td>\n<td>FF</td>\n<td><code>0xff</code></td>\n</tr>\n</tbody>\n</table>\n<span class=\"paragraph\"><strong>Verification:</strong>\n- Binary \u2192 Decimal: <code>255</code><br />\n- Octal \u2192 Decimal: <code>255</code><br />\n- Hex \u2192 Decimal: <code>255</code>  </span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "iLit",
+      "code_hash": "9baf76ed6f30e0b52e866e382173fffa",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<span class=\"markdown prose dark:prose-invert\"><h2 id=\"bitwise-operations\">\ud83d\udd27 Bitwise Operations</h2>\n<span class=\"paragraph\">Explore how Python handles binary operations at the bit level.</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "ZHCJ",
+      "code_hash": "707d6e75a43783cb6a2f9a0b8e6e69d4",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<div style='display: flex;flex: 1;flex-direction: column;justify-content: flex-start;align-items: normal;flex-wrap: nowrap;gap: 0.5rem'><span class=\"markdown prose dark:prose-invert\"><h3 id=\"bitwise-operations-explorer\">\u2699\ufe0f Bitwise Operations Explorer</h3></span><marimo-ui-element object-id='ZHCJ-0' random-id='6ef9e6f1-2c40-ec2b-fdba-c5b2d5ba5cee'><marimo-number data-initial-value='5' data-label='&quot;&lt;span class=&#92;&quot;markdown prose dark:prose-invert&#92;&quot;&gt;&lt;span class=&#92;&quot;paragraph&#92;&quot;&gt;First number:&lt;/span&gt;&lt;/span&gt;&quot;' data-start='0' data-stop='255' data-debounce='false' data-full-width='false' data-disabled='false'></marimo-number></marimo-ui-element><marimo-ui-element object-id='ZHCJ-1' random-id='cb470a68-6134-395d-8a74-f6c62e8a393a'><marimo-number data-initial-value='3' data-label='&quot;&lt;span class=&#92;&quot;markdown prose dark:prose-invert&#92;&quot;&gt;&lt;span class=&#92;&quot;paragraph&#92;&quot;&gt;Second number:&lt;/span&gt;&lt;/span&gt;&quot;' data-start='0' data-stop='255' data-debounce='false' data-full-width='false' data-disabled='false'></marimo-number></marimo-ui-element></div>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "ROlb",
+      "code_hash": "b56eb2a7091b7b522370e66f4cc1898d",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "qnkX",
+      "code_hash": "1326156c9a95e0a01c7bf3b4f866cf16",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<span class=\"markdown prose dark:prose-invert\"><h2 id=\"bitwise-operations-5-and-3\">Bitwise Operations: 5 and 3</h2>\n<ul>\n<li><strong>AND:</strong> <code>5 &amp; 3</code> = <strong>1</strong> (<code>00000001</code>)</li>\n<li><strong>OR:</strong> <code>5 | 3</code> = <strong>7</strong> (<code>00000111</code>)  </li>\n<li><strong>XOR:</strong> <code>5 ^ 3</code> = <strong>6</strong> (<code>00000110</code>)</li>\n</ul>\n<h3 id=\"binary\">Binary:</h3>\n<ul>\n<li><strong>5</strong> = <code>00000101</code></li>\n<li><strong>3</strong> = <code>00000011</code></li>\n</ul></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "TqIu",
+      "code_hash": "37b57ab07058e00113a4326e5998ec60",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<span class=\"markdown prose dark:prose-invert\"><h2 id=\"number-base-conversions\">\ud83d\udd04 Number Base Conversions</h2>\n<span class=\"paragraph\">Python supports multiple number bases. Let's explore conversions between decimal, binary, octal, and hexadecimal.</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Vxnm",
+      "code_hash": "a6a7e6d30c6c281fc2362e728dc2e750",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<span class=\"markdown prose dark:prose-invert\"><h2 id=\"number-base-conversions\">\ud83d\udd04 Number Base Conversions</h2>\n<span class=\"paragraph\">Python supports multiple number bases. Let's explore conversions \nbetween decimal, binary, octal, and hexadecimal.</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "DnEU",
+      "code_hash": "51c9488b090a7970eff4dba5cd11139c",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "ulZA",
+      "code_hash": "e2251323dc6b0d5c2f3de1e1cb2b7f77",
+      "outputs": [],
+      "console": []
+    }
+  ]
+}
