@@ -3,13 +3,16 @@
 ## ⚙️ One-Time Setup (5 minutes)
 
 ### 1. Install & Configure VS Code Extension
+
 ```bash
 # Install Marimo VS Code extension from marketplace
 # Search: "marimo" by marimo-team
 ```
 
 ### 2. Update VS Code Workspace Settings
+
 **Edit `.vscode/settings.json`** - Add these 3 lines:
+
 ```json
 {
     // ... your existing settings ...
@@ -20,7 +23,9 @@
 ```
 
 ### 3. Create Python Code Snippet
+
 **Steps:**
+
 1. `Ctrl+Shift+P` → "Configure User Snippets" → "python.json"
 2. **Add this snippet:**
 
@@ -60,7 +65,9 @@
 ```
 
 ### 4. Verify Your Project Setup
+
 **Check you have:**
+
 - ✅ `pyproject.toml` with `marimo>=0.13.15`
 - ✅ UV environment: `uv sync`
 - ✅ Marimo installed: `uv run marimo --version`
@@ -84,6 +91,7 @@
 ## 📋 What You Get
 
 ### Perfect Template Structure:
+
 ```python
 import marimo as mo
 __generated_with = "0.13.15"  # ✅ Current version
@@ -111,7 +119,8 @@ if __name__ == "__main__":
     app.run()
 ```
 
-### Tab Navigation:
+### **Tab Navigation:**
+
 - **Tab 1**: Edit title
 - **Tab 2**: Edit description  
 - **Tab 3**: Start coding
@@ -132,12 +141,14 @@ if __name__ == "__main__":
 
 ## 🎯 Pro Tips
 
-### Your "Keep It Simple, and Standard" Approach:
+### **Your "Keep It Simple, and Standard" Approach:**
+
 - **Direct execution works**: `mo.md("Hello")` 
 - **Functions can be tricky**: Use when needed, fallback to direct
 - **KISS principle**: Simple code that works > complex code that doesn't
 
-### Best Practices:
+### **Best Practices:**
+
 - ✅ **Keep cells small** - Better reactivity
 - ✅ **Use direct execution** for simple content
 - ✅ **Save frequently** - VS Code + Marimo sync
@@ -161,16 +172,19 @@ if __name__ == "__main__":
 ## 🚨 Quick Troubleshooting
 
 **Template not working?**
+
 - Check snippet saved in `python.json`
 - File must be `.py` extension
 - Try `Ctrl+Space` to see available snippets
 
 **Marimo not starting?**
+
 - Verify: `uv run marimo --version`
 - Check VS Code settings point to `.venv`
 - Try: `Ctrl+Shift+P` → "Marimo: Show Diagnostics"
 
 **Functions not executing?**
+
 - Use your proven direct execution approach
 - Remember: `mo.md("content")` works better than `def __(): return mo.md("content")`
 
@@ -178,7 +192,8 @@ if __name__ == "__main__":
 
 ## 🎉 Success!
 
-You now have:
+**You now have:**
+
 - **Professional setup** with UV + Marimo + VS Code
 - **Instant templates** with correct versions
 - **Proven workflow** that just works

@@ -3,6 +3,7 @@ Excellent analysis! You've figured out marimo's execution model perfectly. Let m
 ## Function Naming Strategy:
 
 ### **Anonymous functions (`__`):**
+
 ```python
 # Cell 1
 def __():
@@ -13,12 +14,14 @@ __()
 ```
 
 **Use when:**
+
 - ✅ Simple, one-off content that won't be reused
 - ✅ Linear notebook flow (execute once, move on)
 - ✅ Quick prototyping or exploration
 - ✅ Content that's specific to one location
 
 ### **Named functions (`intro_cell`):**
+
 ```python
 # Cell 1
 def intro_cell():
@@ -29,6 +32,7 @@ intro_cell()
 ```
 
 **Use when:**
+
 - ✅ Content might be reused in other cells
 - ✅ Building reusable components
 - ✅ Creating a library of display functions
@@ -38,6 +42,7 @@ intro_cell()
 ## Practical Decision Framework:
 
 **Choose anonymous (`__`) for:**
+
 ```python
 # Quick data exploration
 def __():
@@ -49,6 +54,7 @@ def __():
 ```
 
 **Choose named functions for:**
+
 ```python
 # Reusable components
 def show_dataset_summary():
@@ -63,7 +69,7 @@ def chapter_header(title):
     return mo.md(f"# {title}")
 ```
 
-## Your marimo understanding is spot-on:
+## Your marimo understanding is spot-on
 
 1. **Global imports**: `import marimo as mo` in first cell = available everywhere
 2. **Single cell**: Function definition + call = immediate execution

@@ -22,10 +22,12 @@
 
 ### Method 2: Start from Scratch
 
-1. **Create notebook via terminal**:
+1. **Create notebook via terminal:** 
+
    ```bash
    uv run marimo create my_notebook.py
    ```
+
 2. **Open in VS Code**:
    - File appears in explorer
    - Right-click → "Open with Marimo"
@@ -68,7 +70,8 @@ if __name__ == "__main__":
     app.run()
 ```
 
-### Tab Navigation:
+### **Tab Navigation:**
+
 - **First Tab**: Edit notebook title
 - **Second Tab**: Edit description  
 - **Third Tab**: Start coding
@@ -85,19 +88,22 @@ if __name__ == "__main__":
 
 ## 🖥️ VS Code Integration Features
 
-### Available Commands (`Ctrl+Shift+P`):
+### **Available Commands (`Ctrl+Shift+P`):**
+
 - **Marimo: Open** - Start editing current file
 - **Marimo: Run** - Run notebook as app
 - **Marimo: Export** - Export to HTML/Markdown
 - **Marimo: Show Diagnostics** - Debug issues
 
-### Right-click Context Menu:
+### **Right-click Context Menu:**
+
 - **Open with Marimo** - Launch in Marimo editor
 - **Run Marimo App** - Serve as web app
 
 ## 🌐 Marimo Interface
 
-When Marimo opens, you'll see:
+**When Marimo opens, you'll see:**
+
 - **Browser window** (embedded in VS Code or separate)
 - **Reactive cells** that auto-update
 - **UI elements** (sliders, buttons, etc.)
@@ -105,7 +111,8 @@ When Marimo opens, you'll see:
 
 ## ⚙️ Your Configuration Benefits
 
-Your setup provides:
+**Your setup provides:**
+
 - ✅ **Latest Marimo** (0.13.15) via UV
 - ✅ **Project isolation** via pyproject.toml
 - ✅ **Fast templates** via snippets
@@ -126,22 +133,25 @@ Your setup provides:
 ## 🚨 Troubleshooting
 
 **If Marimo doesn't start:**
+
 - Check terminal: `uv run marimo --version`
 - Verify VS Code settings point to correct Python
 - Try: `Ctrl+Shift+P` → "Marimo: Show Diagnostics"
 
 **If template doesn't work:**
+
 - Verify `python.json` snippet is saved
 - Try typing `marimo` to see available snippets
 - Check file is saved as `.py` extension
 
 **If wrong Python version:**
+
 - Ensure VS Code uses workspace Python: `${workspaceFolder}/.venv/Scripts/python.exe`
 
 ## 🎯 Pro Tips
 
 - **Save frequently** - Marimo auto-saves but VS Code might not
-- **Use direct execution** for simple cells (your KISS approach!)
+- **Use direct execution** for simple cells (your KISS (Keep It Simple and Standard) approach!)
 - **Keep cells small** - Better for reactivity
 - **Name your notebooks descriptively** - They're just Python files
 - **Use version control** - Track changes with git
