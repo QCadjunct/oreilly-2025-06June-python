@@ -15,6 +15,74 @@ def _():
 
 @app.cell
 def _(mo):
+    def __():
+        return mo.md("""
+        ## 🔢 Numeric Object Basics
+
+        Python supports several numeric types. Let's explore the most fundamental ones:
+
+        - Integer objects: Whole numbers with unlimited precision
+        - Floating-point objects: Numbers with decimal points
+        - Complex number objects: Numbers with real and imaginary parts
+        """)
+    __()
+    return
+
+
+@app.cell
+def _(mo):
+    def intro_cell():
+        return mo.md("""
+        ## 🔢 Numeric Object Basics
+
+        Python supports several numeric types. Let's explore the most fundamental ones:
+
+        - Integer objects: Whole numbers with unlimited precision
+        - Floating-point objects: Numbers with decimal points
+        - Complex number objects: Numbers with real and imaginary parts
+        """)
+    intro_cell()
+    return (intro_cell,)
+
+
+@app.cell
+def _(intro_cell):
+    intro_cell()
+    return
+
+
+@app.cell
+def _(mo):
+    def numbers_and_expressions():
+        return mo.md("""
+        # Chapter 5: Numbers and Expressions
+
+        Welcome to this interactive exploration of Python's numeric objects and operations! 
+        This notebook will guide you through hands-on experiments with Python's core numeric types.
+
+        ## Learning Objectives
+        By the end of this interactive session, you will be able to:
+        - [ ] Work with Python's core numeric types (integers, floats, complex numbers)
+        - [ ] Apply arithmetic operators and understand operator precedence
+        - [ ] Convert between different numeric bases (decimal, hex, octal, binary)
+        - [ ] Use advanced numeric types (Decimal, Fraction, Set)
+        - [ ] Perform bitwise operations and understand their applications
+        - [ ] Apply numeric built-in functions and methods effectively
+        """)
+        return
+
+
+    return (numbers_and_expressions,)
+
+
+@app.cell
+def _(numbers_and_expressions):
+    numbers_and_expressions()
+    return
+
+
+@app.cell
+def _(mo):
     mo.md(
         r"""
     # DuckDB Connection Troubleshooting
@@ -84,14 +152,14 @@ def _():
         connection_status = "Connected (read-only)"
     except Exception as e1:
         print(f"❌ Read-only failed: {e1}")
-
+    
         try:
             # Method 2: Check if it's a directory issue
             if os.path.isdir(db_path):
                 # Maybe it's a directory with a specific file inside
                 files_in_dir = os.listdir(db_path)
                 print(f"Directory contains: {files_in_dir}")
-
+            
                 # Look for common database file extensions
                 db_files = [f for f in files_in_dir if f.endswith(('.db', '.duckdb', '.sqlite'))]
                 if db_files:
@@ -103,7 +171,7 @@ def _():
                     raise Exception("No database files found in directory")
             else:
                 raise e1
-
+            
         except Exception as e2:
             print(f"❌ Directory approach failed: {e2}")
             connection_status = "Failed to connect"
@@ -120,40 +188,40 @@ def _(conn):
     def test_database_connection():
         try:
             tables_result = conn.execute("SHOW TABLES").fetchall()
-
+        
             print("📊 AdventureWorks Database Connected Successfully!")
             print("=" * 60)
             print(f"Database file: AdventureWorksDW2019.duckdb")
             print(f"Connection mode: Read-only")
             print(f"Available tables: {len(tables_result)}")
             print()
-
+        
             # Show all tables in a nice format
             print("📋 Available Tables:")
             print("-" * 40)
             for i, (table_name,) in enumerate(tables_result, 1):
                 print(f"  {i:2d}. {table_name}")
-
+        
             # Show sample data from the first table
             if tables_result:
                 sample_table = tables_result[0][0]
                 print(f"\n🔍 Sample data from '{sample_table}':")
                 print("-" * 50)
-
+            
                 sample_query = f"SELECT * FROM {sample_table} LIMIT 3"
                 sample_data = conn.execute(sample_query).fetchall()
                 table_columns = [desc[0] for desc in conn.description]
-
+            
                 # Print column headers
                 header = " | ".join(f"{col:15}" for col in table_columns)
                 print(header)
                 print("-" * len(header))
-
+            
                 # Print sample rows
                 for row in sample_data:
                     row_str = " | ".join(f"{str(val):15}" for val in row)
                     print(row_str)
-
+                
         except Exception as e:
             print(f"❌ Error testing connection: {e}")
 
@@ -192,16 +260,16 @@ def _(mo):
 def _(database_connection):
     class AdventureWorksQueryEngine:
         """Single responsibility: Execute database queries"""
-
+    
         def __init__(self, connection):
             self.conn = connection
-
+    
         def execute_query(self, query):
             """DRY: Single method for all query execution"""
             result = self.conn.execute(query).fetchall()
             columns = [desc[0] for desc in self.conn.description] if self.conn.description else []
             return result, columns
-
+    
         def execute_scalar(self, query):
             """DRY: Single method for scalar results"""
             result, _ = self.execute_query(query)
@@ -217,9 +285,9 @@ def _(database_connection):
 def _():
     class AdventureWorksQueries:
         """Single responsibility: Define all queries"""
-
+    
         SALES_COUNT = "SELECT COUNT(*) FROM FactInternetSales"
-
+    
         # Exclude LargePhoto and other binary columns
         SAMPLE_PRODUCTS = """
             SELECT 
@@ -231,7 +299,7 @@ def _():
             FROM DimProduct 
             LIMIT 5
         """
-
+    
         YEARLY_SALES = """
             SELECT 
                 YEAR(OrderDate) as Year,
@@ -254,12 +322,12 @@ def _():
 
     class DataTransformer:
         """Single responsibility: Transform query results to DataFrames"""
-
+    
         @staticmethod
         def to_dataframe(result, columns):
             """DRY: Single method for DataFrame conversion"""
             return pd.DataFrame(result, columns=columns)
-
+    
         @staticmethod
         def format_count(count, label):
             """DRY: Single method for count formatting"""
@@ -340,10 +408,10 @@ def _(mo):
     ```python
     class AdventureWorksQueryEngine:
         \"""Single responsibility: Execute database queries\"""
-
+    
         def execute_query(self, query):
             \"""DRY: Single method for all query execution\"""
-
+        
         def execute_scalar(self, query):
             \"""DRY: Single method for scalar results\"""
     ```
@@ -355,7 +423,7 @@ def _(mo):
     ```python
     class AdventureWorksQueries:
         \"""Single responsibility: Define all queries\"""
-
+    
         SALES_COUNT = "SELECT COUNT(*) FROM FactInternetSales"
         SAMPLE_PRODUCTS = \"""SELECT ProductKey, ProductAlternateKey, ... FROM DimProduct LIMIT 5\"""
         YEARLY_SALES = \"""SELECT YEAR(OrderDate) as Year, ... FROM FactInternetSales ...\"""
@@ -368,11 +436,11 @@ def _(mo):
     ```python
     class DataTransformer:
         \"""Single responsibility: Transform query results to DataFrames\"""
-
+    
         @staticmethod
         def to_dataframe(result, columns):
             \"""DRY: Single method for DataFrame conversion\"""
-
+        
         @staticmethod
         def format_count(count, label):
             \"""DRY: Single method for count formatting\"""
